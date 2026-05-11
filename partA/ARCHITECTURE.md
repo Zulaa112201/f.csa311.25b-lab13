@@ -1,17 +1,13 @@
 # System Architecture
 
-## 1. High-Level Architecture
-[cite_start]Систем нь Layered Architecture буюу үе давхаргат бүтэцтэй байна[cite: 35].
+## Overview
+Энэхүү "Mini Library" систем нь **Layered Architecture** (Давхаргат архитектур) зарчмаар хөгжүүлэгдсэн. Энэ нь кодын хамаарлыг багасгаж, тест хийх болон засвар үйлчилгээ хийхэд хялбар болгодог.
 
-```mermaid
-graph TD
-    User((User)) --> API[REST Controllers]
-    API --> Service[Service Layer - Logic]
-    Service --> Repo[Repository Layer - Data Access]
-    Repo --> DB[(H2 In-Memory DB)]
+## Architecture Layers
+1. **Routes Layer:** API endpoint-үүдийг тодорхойлж, хүсэлтийг хүлээн авна.
+2. **Controller/Service Logic:** Бизнес дүрмүүдийг хэрэгжүүлнэ (Жишээ нь: Ном олгох боломжтой эсэхийг шалгах).
+3. **Repository Layer:** Өгөгдлийн сантай (SQLite/Memory) шууд харилцаж, CRUD үйлдлүүдийг гүйцэтгэв.
+4. **Models:** Системийн өгөгдлийн бүтцийг (Book, Member, Loan) тодорхойлно.
 
-    subgraph "Core Modules"
-        Book[Book Module]
-        Member[Member Module]
-        Loan[Loan Module]
-    end
+## Data Flow
+User Request -> Routes -> Repositories -> Data Storage

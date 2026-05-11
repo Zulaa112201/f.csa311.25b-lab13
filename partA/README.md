@@ -1,15 +1,30 @@
-# Mini Library System - Getting Started
+# Part A: Planning & Architecture
 
-Энэхүү төсөл нь AI-assisted software construction хичээлийн бие даалт юм.
+Энэхүү хэсэгт "Mini Library System" төслийн бэлтгэл үе шат, системийн бүтэц, технологийн сонголтын үндэслэл болон AI-тай хэрхэн төлөвлөлт хийсэн талаарх баримт бичгүүд багтсан болно.
 
-## Урьдчилсан шаардлага
-* Java 17
-* Maven 3.x
+## Агуулга
 
-## Проектыг ажиллуулах (Draft)
-1. Репозиторыг клон хийх: `git clone <url>`
-2. Проектыг build хийх: `./mvnw clean install`
-3. Проектыг ажиллуулах: `./mvnw spring-boot:run`
+1. **[PROJECT.md](./PROJECT.md):** Төслийн зорилго, хамрах хүрээ болон хэрэгжүүлэх үндсэн функцууд.
+2. **[ARCHITECTURE.md](./ARCHITECTURE.md):** Системийн давхаргат бүтэц (Layered Architecture) болон өгөгдлийн урсгалын схем.
+3. **[STACK-COMPARISON.md](./STACK-COMPARISON.md):** Java (Spring Boot) болон Node.js (TypeScript) стакуудын харьцуулалт, яагаад TypeScript-ийг сонгосон үндэслэл.
+4. **[adr/](./adr/):** Архитектурын чухал шийдвэрүүдийн тэмдэглэл (ADR-001).
+5. **[ai-sessions/](./ai-sessions/):** AI туслахтай (Claude) хийсэн анхны төлөвлөлтийн сессийн лог.
 
-## Тест ажиллуулах
-`./mvnw test`
+---
+
+## Системийн архитектурын тойм
+
+Бид системийг хөгжүүлэхдээ **Clean Architecture**-ийн зарчмыг баримталсан бөгөөд дараах 4 давхаргад хуваасан:
+
+* **Models:** Өгөгдлийн объект болон төрлүүд.
+* **Repositories:** Өгөгдлийн сангийн үйлдлүүд (Data Access).
+* **Routes:** API endpoint-үүд болон хүсэлт хүлээн авах хэсэг.
+* **Middleware:** Алдаа барих болон аюулгүй байдлын шалгалтууд.
+
+## Технологийн сонголт
+
+Бид анх Java/Spring Boot ашиглахаар төлөвлөж байсан боловч хөгжүүлэлтийн хурд болон AI-тай хамтран ажиллах (Context-management) давуу талыг харгалзан **TypeScript/Express** стакыг эцсийн байдлаар сонгосон.
+
+> Дэлгэрэнгүйг [STACK-COMPARISON.md](./STACK-COMPARISON.md) файлаас харна уу.
+
+---
