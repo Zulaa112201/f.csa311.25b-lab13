@@ -17,6 +17,6 @@ export interface Loan {
     id: string;
     bookId: string;
     memberId: string;
-    loanDate: Date;
+    loanDate: string;
     isReturned: boolean;
 }
