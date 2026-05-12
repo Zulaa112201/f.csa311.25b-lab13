@@ -6,7 +6,7 @@
 
 1. **[PROJECT.md](./PROJECT.md):** Төслийн зорилго, хамрах хүрээ болон хэрэгжүүлэх үндсэн функцууд.
 2. **[ARCHITECTURE.md](./ARCHITECTURE.md):** Системийн давхаргат бүтэц (Layered Architecture) болон өгөгдлийн урсгалын схем.
-3. **[STACK-COMPARISON.md](./STACK-COMPARISON.md):** Java (Spring Boot) болон Node.js (TypeScript) стакуудын харьцуулалт, яагаад TypeScript-ийг сонгосон үндэслэл.
+3. **[STACK-COMPARI                                                                                                                                                                                                                                                                             SON.md](./STACK-COMPARISON.md):** Java (Spring Boot) болон Node.js (TypeScript) стакуудын харьцуулалт, яагаад TypeScript-ийг сонгосон үндэслэл.
 4. **[adr/](./adr/):** Архитектурын чухал шийдвэрүүдийн тэмдэглэл (ADR-001).
 5. **[ai-sessions/](./ai-sessions/):** AI туслахтай (Claude) хийсэн анхны төлөвлөлтийн сессийн лог.
 

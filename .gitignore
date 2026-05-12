@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+dist/
+
+# Database files (тест бүрд шинээр үүсдэг тул GitHub-д хэрэггүй)
+*.db
+*.db-shm
+*.db-wal
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
